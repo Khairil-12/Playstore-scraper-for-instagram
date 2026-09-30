@@ -124,6 +124,10 @@ def main():
 
     df_final = df_final.reset_index(drop=True)
 
+    # Add GitHub link to Column H (8th column)
+    df_final['repositoryLink'] = ''
+    df_final.at[0, 'repositoryLink'] = 'https://github.com/Khairil-12/Instagram-Scraper.git'
+
     df_final.to_csv(OUTPUT_FILE, index=False, sep=';', encoding='utf-8-sig')
     print(f"\n[+] Exported '{OUTPUT_FILE}' ({len(df_final)} rows)")
 
