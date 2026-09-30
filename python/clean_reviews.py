@@ -124,7 +124,7 @@ def main():
 
     df_final = df_final.reset_index(drop=True)
 
-    df_final.to_csv(OUTPUT_FILE, index=False, encoding='utf-8')
+    df_final.to_csv(OUTPUT_FILE, index=False, sep=';', encoding='utf-8-sig')
     print(f"\n[+] Exported '{OUTPUT_FILE}' ({len(df_final)} rows)")
 
     # Validation

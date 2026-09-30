@@ -84,7 +84,7 @@ def export_csv(raw_reviews):
     df = pd.DataFrame(raw_reviews)
     cols = [c for c in DESIRED_COLUMNS if c in df.columns]
     df_out = df[cols] if cols else df
-    df_out.to_csv(OUTPUT_FILE, index=False, encoding='utf-8')
+    df_out.to_csv(OUTPUT_FILE, index=False, sep=';', encoding='utf-8-sig')
     print(f"[+] Exported '{OUTPUT_FILE}' ({len(df_out)} rows, {len(df_out.columns)} cols)")
     return df_out
 
