@@ -1,0 +1,9 @@
+# Excluded Project Files
+*.csv
+documentation/play_store_scraping_documentation.md
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
