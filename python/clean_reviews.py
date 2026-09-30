@@ -91,7 +91,7 @@ def clean_text(text):
 
 def main():
     print(f"[*] Loading {RAW_FILE}...")
-    df = pd.read_csv(RAW_FILE)
+    df = pd.read_csv(RAW_FILE, sep=';')
     print(f"    Raw rows: {len(df)}")
 
     cols = [c for c in DESIRED_COLUMNS if c in df.columns]
